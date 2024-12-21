@@ -1,91 +1,85 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+
+#attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
-body {
-  font-family: Estedad;
-  padding: 2rem;
-  min-height: 100vh;
-  background-image: url(./page-background-1.png);
-  text-align: center;
+#attendance-table tr:nth-child(even) {
+    background-color: rgba(245, 246, 251, 0.7);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 2rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
+#attendance-table td {
+    border: 1px solid #eaebf4;
+    /* background-color: rgb(244, 244, 248); */
+    background-color: transparent;
+    transition: all 0.3s;
 }
 
-tr:nth-child(even) {
-  background-color: rgba(245, 246, 251, 0.7);
+#attendance-table td.present, #attendance-table td.absent {
+    font-family: none;
 }
 
-td {
-  border: 1px solid #eaebf4;
-  /* background-color: rgb(244, 244, 248); */
-  background-color: transparent;
-  transition: all 0.3s;
-}
-th,
-td {
-  text-align: center;
-  padding: 0.4rem 0.1rem;
-  user-select: none;
-}
-th {
-  background-color: blueviolet;
-  color: white;
-  font-size: 0.8rem;
-}
-.present {
-  background-color: #d4edda;
-  color: #155724;
-}
-.absent {
-  background-color: #f8d7da;
-  color: #721c24;
+#attendance-table th, #attendance-table td {
+    text-align: center;
+    padding: 0.4rem 0.1rem;
+    user-select: none;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+#attendance-table th {
+    background-color: blueviolet;
+    color: white;
+    font-size: 0.8rem;
 }
 
-button {
-  margin-top: 2rem;
-  appearance: none; /* Removes browser-specific styles */
-  border: none; /* Removes border */
-  background: rgb(56, 99, 230); /* Removes background */
-  font: inherit; /* Inherits the font style from its parent */
-  color: white; /* Inherits the text color from its parent */
-  line-height: inherit; /* Ensures consistent alignment */
-  cursor: pointer; /* Sets the cursor to pointer */
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+#attendance-table .present {
+    background-color: #d4edda;
+    color: #155724;
 }
 
-button:focus {
-  outline: none;
+#attendance-table .absent {
+    background-color: #f8d7da;
+    color: #721c24;
 }
 
-.table-container {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+#attendance-table .cursor-pointer {
+    cursor: pointer;
+}
+
+#attendance-table button {
+    margin-top: 2rem;
+    appearance: none; /* Removes browser-specific styles */
+    border: none; /* Removes border */
+    background: rgb(56, 99, 230); /* Removes background */
+    font: inherit; /* Inherits the font style from its parent */
+    color: white; /* Inherits the text color from its parent */
+    line-height: inherit; /* Ensures consistent alignment */
+    cursor: pointer; /* Sets the cursor to pointer */
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+#attendance-table button:focus {
+    outline: none;
+}
+
+#attendance-table .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 @media (max-width: 600px) {
-  th,
-  td {
-    font-size: 0.6rem;
-    padding: 0.7rem;
-  }
+    #attendance-table th, td {
+        font-size: 0.6rem;
+        padding: 0.7rem;
+    }
 }
+
 /* th:first-child, td:first-child {
   position: fixed;
   background-color: #E9E8EB;
@@ -97,22 +91,22 @@ th:nth-child(2), td:nth-child(2) {
 } */
 
 @media only screen and (max-width: 1050px) {
-  th:first-child,
-  td:first-child {
-    position: fixed;
-    width: 10rem;
+    #attendance-table th:first-child, #attendance-table td:first-child {
+        position: fixed;
+        width: 10rem;
 
-  }
-  td:first-child {
-    background-color: white;
-    
-  }
-  th:first-child {
-    opacity: 0;
-  }
+    }
 
-  th:nth-child(2),
-  td:nth-child(2) {
-    padding-right: 11rem;
-  }
+    #attendance-table td:first-child {
+        background-color: white;
+
+    }
+
+    #attendance-table th:first-child {
+        opacity: 0;
+    }
+
+    #attendance-table th:nth-child(2), #attendance-table td:nth-child(2) {
+        padding-right: 11rem;
+    }
 }
